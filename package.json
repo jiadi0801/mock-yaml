@@ -1,0 +1,22 @@
+{
+  "name": "mock-yaml",
+  "version": "1.0.0",
+  "description": "mockjs 和 yaml",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiadi0801/mock-yaml.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jiadi0801/mock-yaml/issues"
+  },
+  "homepage": "https://github.com/jiadi0801/mock-yaml#readme",
+  "dependencies": {
+    "js-yaml": "^3.8.4"
+  }
+}
