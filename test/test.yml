@@ -1,7 +1,8 @@
 root: 
   str:
-    - !str/min-max 1-10 ★
-    - !str/count 4 ★
+    -10--1: !str/min-max -10--1 ★
+    1-10: !str/min-max 1-10 ★
+    4: !str/count 4 ★
   number:
     -10-10: !num/min-max -10-10  1
     1-10.2-3: !num/min-max.dmin-dmax 1-10.2-3  10
