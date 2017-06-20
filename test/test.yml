@@ -2,3 +2,11 @@ root:
   str:
     - !str/min-max 1-10 ★
     - !str/count 4 ★
+  number:
+    -10-10: !num/min-max -10-10  1
+    1-10.2-3: !num/min-max.dmin-dmax 1-10.2-3  10
+    -10-1.1-4: !num/min-max.dmin-dmax -10-1.1-4  10
+    1-10.3: !num/min-max.dcount 1-10.3 1
+    1-10.-3: !num/min-max.dcount 1-10.-3 1
+    -30.1-2: !num/count.dmin-dmax -30.1-2 1
+    -23.4: !num/count.dcount -23.4 1

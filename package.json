@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jiadi0801/mock-yaml#readme",
   "dependencies": {
-    "js-yaml": "^3.8.4"
+    "js-yaml": "^3.8.4",
+    "mockjs": "^1.0.1-beta3"
   }
 }
