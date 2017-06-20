@@ -17,4 +17,6 @@
 |number            | count.dcount        |            |       |
 |number            | count               |  N          | 不必要 |
 |number            | +step               |  N          |       |
+|boolean           | 1                   |            |       |
+|boolean           | min-max             |            |       |
 
