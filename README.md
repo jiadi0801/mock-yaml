@@ -4,3 +4,10 @@
 ## TODO
 编写mockjs兼容文档
 测试用例
+
+## mockjs语法兼容列表
+|类型     | 数据模板 | 兼容与否|
+|---------| ---------|---------|
+|string   | min-max  |  Y      |
+|string   | count    |  Y      |
+

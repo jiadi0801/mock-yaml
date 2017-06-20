@@ -1,0 +1,4 @@
+root: 
+  str:
+    - !str/min-max 1-10 ★
+    - !str/count 4 ★
