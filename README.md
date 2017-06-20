@@ -6,14 +6,15 @@
 测试用例
 
 ## mockjs语法兼容列表
-|类型              | 数据模板            | 兼容与否    | 备注  |
+|类型              | 数据模板            | 兼容(default Y)   | 备注  |
 |------------------|---------------------|-------------|-------|
-|string            | min-max             |  Y          |       |
-|string            | count               |  Y          |       |
-|number            | min-max             |  Y          |       |
-|number            | min-max.dmin-dmax   |  Y          |       |
-|number            | min-max.dcount      |  Y          |       |
-|number            | count.dmin-dmax     |  Y          |       |
-|number            | count.dcount        |  Y          |       |
+|string            | min-max             |            |       |
+|string            | count               |            |       |
+|number            | min-max             |            |       |
+|number            | min-max.dmin-dmax   |            |       |
+|number            | min-max.dcount      |            |       |
+|number            | count.dmin-dmax     |            |       |
+|number            | count.dcount        |            |       |
 |number            | count               |  N          | 不必要 |
+|number            | +step               |  N          |       |
 
