@@ -19,4 +19,5 @@
 |number            | +step               |  N          |       |
 |boolean           | 1                   |            |       |
 |boolean           | min-max             |            |       |
-
+|object            | count               |            |       |
+|object            | min-max             |            |       |
