@@ -45,3 +45,158 @@ placeholder:
     - hello @string(5,10)
 ```
 
+## 示例
+* file.yml
+```yaml
+root: 
+  str:
+    -10--1: !str/min-max -10--1 ★
+    1-10: !str/min-max 1-10 ★
+    4: !str/count 4 ★
+  number:
+    -10-10: !num/min-max -10-10  1
+    1-10.2-3: !num/min-max.dmin-dmax 1-10.2-3  10
+    -10-1.1-4: !num/min-max.dmin-dmax -10-1.1-4  10
+    1-10.3: !num/min-max.dcount 1-10.3 1
+    1-10.-3: !num/min-max.dcount 1-10.-3 1
+    -30.1-2: !num/count.dmin-dmax -30.1-2 1
+    -23.4: !num/count.dcount -23.4 1
+  boolean:
+    anychar: !bool/1 1 1
+    true1-3: !bool/min-max 1-3 true
+    false1-3: !bool/min-max 1-3 false
+  object:
+    2: &aliasobj1  !object/count
+      /rule: 2
+      310000: 北京市
+      320000: 江苏省
+      330000: 浙江省
+      340000: 安徽省
+    1-3: &aliasobj2 !object/count
+      /rule: 1-3
+      310000: 北京市
+      320000: 江苏省
+      330000: 浙江省
+      340000: 安徽省
+  array:
+    1-3: !array/min-max &alias1
+      - 1-3
+      - 北京市
+      - 江苏省
+      - 浙江省
+      - 安徽省
+    2: !array/count 
+      - 2
+      - 北京市
+      - 江苏省
+      - 浙江省
+      - 安徽省
+  func: !!js/function >
+      function foobar() {
+        return 'Wow! JS-YAML Rocks!';
+      }
+  regexp: 
+    - !regexp/1 /[a-z][A-Z][0-9]/
+    - !regexp/1 /\w\W\s\S\d\D/
+    - !regexp/1 /\d{5,10}/
+    - !regexp/1 /@color/
+  placeholder:
+    - '@check' 
+    - '@url'
+    - hello @string(5,10)
+    - '@now'
+  alias: *alias1
+  aliasobj: 
+    <<: *aliasobj1
+    <<: *aliasobj2
+```
+
+* json
+```json
+{
+  "root": {
+    "str": {
+      "4": "★★★★",
+      "-10--1": "",
+      "1-10": "★★★★★★★"
+    },
+    "number": {
+      "-10-10": 2,
+      "1-10.2-3": 9.361,
+      "-10-1.1-4": -8.07,
+      "1-10.3": 2.412,
+      "1-10.-3": 8.6158,
+      "-30.1-2": -30.37,
+      "-23.4": -23.9829
+    },
+    "boolean": {
+      "anychar": false,
+      "true1-3": false,
+      "false1-3": false
+    },
+    "object": {
+      "2": {
+        "310000": "北京市",
+        "320000": "江苏省"
+      },
+      "1-3": {
+        "310000": "北京市",
+        "330000": "浙江省",
+        "340000": "安徽省"
+      }
+    },
+    "array": {
+      "2": [
+        "北京市",
+        "江苏省",
+        "浙江省",
+        "安徽省",
+        "北京市",
+        "江苏省",
+        "浙江省",
+        "安徽省"
+      ],
+      "1-3": [
+        "北京市",
+        "江苏省",
+        "浙江省",
+        "安徽省",
+        "北京市",
+        "江苏省",
+        "浙江省",
+        "安徽省"
+      ]
+    },
+    "regexp": [
+      "fG8",
+      "V@ u1\"",
+      "54677466",
+      "#79f2af"
+    ],
+    "placeholder": [
+      "extend success",
+      "tn3270://vdqsmnf.sa/weo",
+      "hello GmFmah",
+      "2017-06-21 22:42:15"
+    ],
+    "alias": [
+      "北京市",
+      "江苏省",
+      "浙江省",
+      "安徽省",
+      "北京市",
+      "江苏省",
+      "浙江省",
+      "安徽省"
+    ],
+    "aliasobj": {
+      "310000": "北京市",
+      "320000": "江苏省",
+      "330000": "浙江省",
+      "340000": "安徽省"
+    },
+    "func": "Wow! JS-YAML Rocks!"
+  }
+}
+
+```
