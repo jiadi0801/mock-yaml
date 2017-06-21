@@ -18,7 +18,7 @@ agree [discuss] Mock.mock() 将会转义函数
 |number            | min-max.dcount      |            |       |
 |number            | count.dmin-dmax     |            |       |
 |number            | count.dcount        |            |       |
-|number            | count               |  N          | 不必要 |
+|number            | count               |  N          |      |
 |number            | +step               |  N          |       |
 |boolean           | 1                   |            |       |
 |boolean           | min-max             |            |       |
