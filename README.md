@@ -21,3 +21,11 @@
 |boolean           | min-max             |            |       |
 |object            | count               |            |       |
 |object            | min-max             |            |       |
+|array             | 1                   |            |       |
+|array             | +1                  |  N         |       |
+|array             | min-max             |            |       |
+|array             | count               |            |       |
+|function          | !!js/function >     |            |  内置 |
+|regexp            |                     |            |       |
+|regexp            | min-max             |  N         |       |
+
