@@ -4,6 +4,7 @@
 ## TODO
 编写mockjs兼容文档
 测试用例
+Mock.mock() 将会转义函数，同意
 
 ## mockjs语法兼容列表
 |类型              | 数据模板            | 兼容(default Y)   | 备注  |
@@ -28,4 +29,12 @@
 |function          | !!js/function >     |            |  内置 |
 |regexp            |                     |            |       |
 |regexp            | min-max             |  N         |       |
+
+## 占位符须知
+yml语法的`@`字符已被保留，所以如果存在以`@`为首字母的字符串，那么需要用引号将其包裹起来，如果`@`不是首字母，那么可以省略引号
+``` yaml
+placeholder: 
+    - '@url'
+    - hello @string(5,10)
+```
 

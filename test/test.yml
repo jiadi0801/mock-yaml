@@ -29,13 +29,13 @@ root:
       330000: 浙江省
       340000: 安徽省
   array:
-    1-3: !array/min-max
+    1-3: !array/min-max &alias1
       - 1-3
       - 北京市
       - 江苏省
       - 浙江省
       - 安徽省
-    2: !array/count
+    2: &alias2 !array/count 
       - 2
       - 北京市
       - 江苏省
@@ -50,3 +50,8 @@ root:
     - !regexp/1 /\w\W\s\S\d\D/
     - !regexp/1 /\d{5,10}/
     - !regexp/1 /@color/
+  placeholder:
+    - '@check' 
+    - '@url'
+    - hello @string(5,10)
+    - '@now'

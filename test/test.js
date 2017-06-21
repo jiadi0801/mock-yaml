@@ -1,18 +1,14 @@
 const fs = require('fs');
-const jsyaml = require('js-yaml');
-const StringType = require('../lib/mockjs/string.js');
-const NumberType = require('../lib/mockjs/number.js');
-const BooleanType = require('../lib/mockjs/boolean.js');
-const ObjectType = require('../lib/mockjs/object.js');
-const ArrayType = require('../lib/mockjs/array.js');
-const RegExpType = require('../lib/mockjs/regexp.js');
+const mockyaml = require('../lib/mockyaml');
 
+var yamlfile = fs.readFileSync('test.yml');
+var obj = mockyaml.toJSON(yamlfile);
 
-const SCHEMA = jsyaml.Schema.create([].concat(StringType, NumberType, BooleanType, ObjectType, ArrayType, RegExpType));
+console.log(JSON.stringify(obj, null, 2));
 
-var doc = jsyaml.load(fs.readFileSync('test.yml'), {
-    schema: SCHEMA
-});
+obj.f = function () {
+    return 'a'
+}
+yamlfile = mockyaml.toYAML(obj);
 
-console.log(JSON.stringify(doc, null, 2));
-console.log(doc.root.func());
+console.log(yamlfile);
