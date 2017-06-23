@@ -4,7 +4,8 @@
   "description": "mockjs 和 yaml",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./test/test.js",
+    "build": "webpack --progress --hide-modules"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "dependencies": {
     "js-yaml": "^3.8.4",
     "mockjs": "^1.0.1-beta3"
+  },
+  "devDependencies": {
+    "webpack": "^3.0.0"
   }
 }
