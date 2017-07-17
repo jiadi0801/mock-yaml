@@ -8,30 +8,35 @@ agree [discuss] Mock.mock() 将会转义函数
 [todo] xhr mock，增强且覆盖尽可能多的库
 [todo] 增加mock占位符
 
-## mockjs数据模板
-|类型              | 数据模板            | 兼容(default Y)   | 备注  |
-|------------------|---------------------|-------------|-------|
-|string            | min-max             |            |       |
-|string            | count               |            |       |
-|number            | min-max             |            |       |
-|number            | min-max.dmin-dmax   |            |       |
-|number            | min-max.dcount      |            |       |
-|number            | count.dmin-dmax     |            |       |
-|number            | count.dcount        |            |       |
-|number            | count               |  N          |      |
-|number            | +step               |  N          |       |
-|boolean           | 1                   |            |       |
-|boolean           | min-max             |            |       |
-|object            | count               |            |       |
-|object            | min-max             |            |       |
-|array             | 1                   |            |       |
-|array             | +1                  |  N         |       |
-|array             | min-max             |            |       |
-|array             | count               |            |       |
-|function          | !!js/function >     |            |  内置 |
-|regexp            |                     |            |       |
-|regexp            | min-max             |  N         |       |
+# 扩展mock的语法
+```
+属性：规则模板         具体规则   初始值
+key:  !str/min-max     1-3        ★
+```
 
+## mockjs数据模板
+|类型              | mockjs数据模板      | mock-yaml示例语法         | 示例结果          | 备注  |
+|------------------|---------------------|---------------------------|-------------------|-------|
+|string            | min-max             | key: !str/min-max 1-3 ★  | {key: "★★"}     |       |
+|string            | count               | key: !str/count 4 ★      | {key: "★★★★"} |       |
+|number            | min-max             | key: !num/min-max -10-10 1| {key: -3}         |       |
+|number            | min-max.dmin-dmax   | key: !num/min-max.dmin-dmax 1-10.2-3  10 | {key: 9.77} |        |
+|number            | min-max.dcount      | key: !num/min-max.dcount 1-10.3 1 | {key: 1.104}  |        |
+|number            | count.dmin-dmax     | key: !num/count.dmin-dmax -30.1-2 1 | {key: -30.9} |        |
+|number            | count.dcount        | key: !num/count.dcount -23.4 1 | {key: -23.7824}  |        |
+|number            | count               |                  |  | 没有实现     |
+|number            | +step               |                  |  | 没有实现     |
+|boolean           | 1                   | key: !bool/1     | {key: false} | 可以只写规则模板!bool/1，不用写具体规则和初始值|
+|boolean           | min-max             | key: !bool/min-max 1-3 true  | {key: false} |        |
+|object            | count               |                  |  | 见示例       |
+|object            | min-max             |                  |  | 见示例       |
+|array             | 1                   |                  |  | 见示例       |
+|array             | +1                  |                  |  | 没有实现     |
+|array             | min-max             |                  |  | 见示例       |
+|array             | count               |                  |  | 见示例       |
+|function          | !!js/function >     |                  |  | yaml内置     |
+|regexp            |                     |                  |  | 见示例       |
+|regexp            | min-max             |                  |  | 没有实现       |
 ## mockjs占位符
 |类型              | 占位符            | 兼容(default Y) | 备注  |
 |------------------|-------------------|------------|-------|
