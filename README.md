@@ -20,6 +20,11 @@ $ npm install mock-yaml --save-dev
 * Random: 扩展mockjs的占位符，也即Mock.Random
 * Mock: mockjs对象
 
+## 相关文档
+* [阮一峰yaml介绍](http://www.ruanyifeng.com/blog/2016/07/yaml.html)
+* [js-yaml](http://nodeca.github.io/js-yaml/)
+* [mockjs示例](http://mockjs.com/examples.html)
+
 ## TODO
 * [todo] xhr mock，增强且覆盖尽可能多的库
 * [todo] 增加mock占位符
