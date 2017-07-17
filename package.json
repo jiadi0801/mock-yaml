@@ -1,7 +1,7 @@
 {
   "name": "mock-yaml",
   "version": "1.0.0",
-  "description": "mockjs 和 yaml",
+  "description": "mockjs 和 yaml，方便模拟数据",
   "main": "index.js",
   "scripts": {
     "test": "node ./test/test.js",
