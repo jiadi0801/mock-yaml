@@ -1,7 +1,7 @@
 # mock-yaml
 用yaml语法作为数据结构，兼容绝大部分[mockjs](https://github.com/nuysoft/Mock)语法，同时获得yaml的强大扩展能力。
 
-## 安装使用
+## 安装
 服务端npm安装
 ```
 $ npm install mock-yaml --save-dev
@@ -11,14 +11,18 @@ $ npm install mock-yaml --save-dev
 <script src="dist/mockyaml.js"></script>
 ```
 
-
+## 使用
+### 使用示例
+见[how to use]()
+### 暴露方法
+* toJSON: 将yaml文件转成json
+* toYAML: 将json转成yaml，暂不支持mockjs规则自动转成yaml语法的规则
+* Random: 扩展mockjs的占位符
+* Mock: mockjs对象
 
 ## TODO
-[todo] 编写mockjs兼容文档
-[todo] 测试用例
-agree [discuss] Mock.mock() 将会转义函数
-[todo] xhr mock，增强且覆盖尽可能多的库
-[todo] 增加mock占位符
+* [todo] xhr mock，增强且覆盖尽可能多的库
+* [todo] 增加mock占位符
 
 ## 扩展mock的语法
 ```
