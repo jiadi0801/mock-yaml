@@ -1,6 +1,18 @@
 # mock-yaml
 用yaml语法作为数据结构，兼容绝大部分[mockjs](https://github.com/nuysoft/Mock)语法，同时获得yaml的强大扩展能力。
 
+## 安装使用
+服务端npm安装
+```
+$ npm install mock-yaml --save-dev
+```
+客户端引入script脚本
+```
+<script src="dist/mockyaml.js"></script>
+```
+
+
+
 ## TODO
 [todo] 编写mockjs兼容文档
 [todo] 测试用例
@@ -8,7 +20,7 @@ agree [discuss] Mock.mock() 将会转义函数
 [todo] xhr mock，增强且覆盖尽可能多的库
 [todo] 增加mock占位符
 
-# 扩展mock的语法
+## 扩展mock的语法
 ```
 属性：规则模板         具体规则   初始值
 key:  !str/min-max     1-3        ★
@@ -43,7 +55,7 @@ key:  !str/min-max     1-3        ★
 |all               | all               |   Y        |       |
 
 ## 注意事项
-yml语法的`@`字符已被保留，所以如果存在以`@`为首字母的字符串，那么需要用引号将其包裹起来，如果`@`不是首字母，那么可以省略引号
+yml语法的`@`字符已被保留，所以如果存在以`@`为首字母的字符串（比如说mockjs的占位符），那么需要用引号将其包裹起来，如果`@`不是首字母，那么可以省略引号。
 ``` yaml
 placeholder: 
     - '@url'
