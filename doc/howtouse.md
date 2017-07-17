@@ -37,7 +37,7 @@ mockyaml.Random.extend({
 
 function readFile(filename){
     try {
-        // 将yaml文件转为json
+        // 将yaml文件转为json，'path.join' is better
         return mockyaml.toJSON(fs.readFileSync('./yaml/' + filename, 'utf8'));
     } catch (e) {
         console.log(e);

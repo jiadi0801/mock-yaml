@@ -13,18 +13,18 @@ $ npm install mock-yaml --save-dev
 
 ## 使用
 ### 使用示例
-见[how to use]()
-### 暴露方法
+见[how to use](https://github.com/jiadi0801/mock-yaml/blob/master/doc/howtouse.md)
+### 方法
 * toJSON: 将yaml文件转成json
 * toYAML: 将json转成yaml，暂不支持mockjs规则自动转成yaml语法的规则
-* Random: 扩展mockjs的占位符
+* Random: 扩展mockjs的占位符，也即Mock.Random
 * Mock: mockjs对象
 
 ## TODO
 * [todo] xhr mock，增强且覆盖尽可能多的库
 * [todo] 增加mock占位符
 
-## 扩展mock的语法
+## mockjs模板在mock-yaml的语法
 ```
 属性：规则模板         具体规则   初始值
 key:  !str/min-max     1-3        ★
