@@ -1,6 +1,6 @@
 {
   "name": "mock-yaml",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "mockjs 和 yaml，方便模拟数据",
   "main": "lib/mockyaml.js",
   "scripts": {
