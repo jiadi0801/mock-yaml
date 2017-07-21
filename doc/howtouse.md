@@ -17,7 +17,7 @@ data:
 var fs = require('fs');
 var app = require('express')();
 var cors = require('cors');
-var mockyaml = require('./mockyaml');
+var mockyaml = require('mock-yaml');
 
 // 跨域
 app.use(cors());
