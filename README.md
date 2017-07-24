@@ -28,6 +28,7 @@ $ npm install mock-yaml --save-dev
 ## TODO
 * [todo] xhr mock，增强且覆盖尽可能多的库
 * [todo] 增加mock占位符
+* [todo] 转换器页面增加链接到GitHub主页
 
 ## mockjs模板在mock-yaml的语法
 ```
