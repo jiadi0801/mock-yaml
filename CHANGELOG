@@ -1,4 +1,7 @@
 ##changelog
 
+### 1.0.3 / 2017/08/02  17:38:00
+* [add] 增加单独编译占位符方法，parsePlaceholder(json)
+
 ### 1.0.2 / 2017/08/02  17:08:00
 * [add] toJSON增加第二个参数，第二个参数为true时，不编译mock占位符
